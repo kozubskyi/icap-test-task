@@ -6,7 +6,7 @@ import { store } from '@/redux/store'
 
 export default function Providers({ children }: { children: React.ReactNode }) {
 	return (
-		<SessionProvider>
+		<SessionProvider basePath="/login">
 			<Provider store={store}>{children}</Provider>
 		</SessionProvider>
 	)

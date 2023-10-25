@@ -73,7 +73,8 @@ export default function Modal({ setIsModalOpened, person, setEditingPerson }: Pr
 
 			dispatch(getTable(limit, (pageNumber - 1) * limit))
 
-			setIsModalOpened(false)
+      setIsModalOpened(false)
+      setEditingPerson(null)
 		} catch (error: any) {
 			if (axios.isAxiosError(error)) {
 				const message = Object.entries(error.response?.data)
